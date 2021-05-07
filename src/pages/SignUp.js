@@ -48,15 +48,9 @@ class SignUp extends React.Component {
                <section className="siginUpform">
                    <div className="container">
                         <div className="form">
-<<<<<<< HEAD
-                            <h1>SingUp</h1>
-                            <p>
-                                <label htmlFor="">Prénom :</label>
-=======
                         <h1>Enregistrer</h1>
                             <p className="data">
                                 <label htmlFor="">Prénom </label>
->>>>>>> c89c8869e774d4303628aed821da21f4d8173de4
                                 <input name="prenom" type="text" onChange={this.handleChange} />
                             </p>
                             <p className="data">

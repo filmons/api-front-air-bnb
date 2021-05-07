@@ -44,51 +44,7 @@ class Login extends React.Component {
       .catch((error) => console.log(error));
   };
 
-  render() {
-    return (
-      <>
-        <section>
-          <div className="container">
-            <div className="form">
-            <h1>LogIn</h1>
 
-<<<<<<< HEAD
-                <p>
-                    {this.state.errorLogin=== true ? "identity incorrect":""}
-                </p>
-              <p>
-                <label htmlFor="">Email :</label>
-                <input name="email" type="text" onChange={this.handleChange} />
-              </p>
-              <p>
-                <label htmlFor="">Password :</label>
-                <input
-                  name="password"
-                  type="password"
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <button onClick={this.handleClick}>Connexion</button>
-              </p>
-            </div>
-          </div>
-        </section>
-      </>
-    );
-  }
-=======
-        axios.post('http://localhost:8000/api/sigin', options, {
-            headers: {'content-type': 'application/json'}
-        })
-        .then(data => {
-            console.log(data.status)
-     this.props.history.push('/')
-        })
-        .catch(error => console.log(error))
-        
-        
-    }
     
     render() {
         return (
@@ -116,7 +72,6 @@ class Login extends React.Component {
             </>
         )
     }
->>>>>>> c89c8869e774d4303628aed821da21f4d8173de4
 }
 
 export default Login;
