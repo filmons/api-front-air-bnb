@@ -4,9 +4,12 @@ import Home from './pages/Home.js';
 import DetailsPlace from './pages/DetailsPlace';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
+import Header from './components/Header'
 
 function App() {
   return (
+    <div>
+    <Header/>
     <Router>
      <Switch>
       <Route exact path='/' component={Home} />
@@ -15,6 +18,7 @@ function App() {
       <Route exact path='/login' component={Login} />
       </Switch>
     </Router>
+    </div>
   );
 }
 
