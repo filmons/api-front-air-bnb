@@ -33,7 +33,10 @@ class SignUp extends React.Component {
         axios.post('http://localhost:8000/api/signup', options, {
             headers: {'content-type': 'application/json'}
         })
-        .then(data => console.log(data))
+        .then(data => {
+            //console.log(data)
+            this.props.history.push('/login')
+        })
         .catch(error => console.log(error))
         console.log(options);
     }
@@ -44,6 +47,7 @@ class SignUp extends React.Component {
                <section>
                    <div className="container">
                         <div className="form">
+                            <h1>SingUp</h1>
                             <p>
                                 <label htmlFor="">Prénom :</label>
                                 <input name="prenom" type="text" onChange={this.handleChange} />
