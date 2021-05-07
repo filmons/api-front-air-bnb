@@ -36,36 +36,38 @@ class SignUp extends React.Component {
         .then(data => console.log(data))
         .catch(error => console.log(error))
         console.log(options);
+        this.props.history.push('/login')
     }
     
     render() {
         return (
             <>
-               <section>
+               <section className="siginUpform">
                    <div className="container">
-                        <div className="SignUpform">
-                            <p>
-                                <label htmlFor="">Prénom :</label>
+                        <div className="form">
+                        <h1>Enregistrer</h1>
+                            <p className="data">
+                                <label htmlFor="">Prénom </label>
                                 <input name="prenom" type="text" onChange={this.handleChange} />
                             </p>
-                            <p>
-                                <label htmlFor="">Nom :</label>
+                            <p className="data">
+                                <label htmlFor="">Nom </label>
                                 <input name="nom" type="text" onChange={this.handleChange} />
                             </p>
-                            <p>
-                                <label htmlFor="">Émail :</label>
+                            <p className="data">
+                                <label htmlFor="">Émail </label>
                                 <input name="email" type="email" onChange={this.handleChange} />
                             </p>
-                            <p>
-                                <label htmlFor="">Rôle :</label>
+                            <p className="data">
+                                <label htmlFor="">Rôle </label>
                                 <select name="role" onChange={this.handleChange} >
                                     <option >Votre Rôle</option>
                                     <option value="0">Touriste</option>
                                     <option value="1">Hôte</option>
                                 </select>
                             </p>
-                            <p>
-                                <label htmlFor="">Mot de passe :</label>
+                            <p className="data">
+                                <label htmlFor="">Mot de passe </label>
                                 <input name="password" type="password" onChange={this.handleChange} />
                             </p>
                             <p>
