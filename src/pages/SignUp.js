@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import '../assets/signUp.css'
 class SignUp extends React.Component {
     constructor(props) {
         super(props);
@@ -43,7 +43,7 @@ class SignUp extends React.Component {
             <>
                <section>
                    <div className="container">
-                        <div className="form">
+                        <div className="SignUpform">
                             <p>
                                 <label htmlFor="">Prénom :</label>
                                 <input name="prenom" type="text" onChange={this.handleChange} />

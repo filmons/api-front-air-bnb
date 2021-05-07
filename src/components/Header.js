@@ -25,7 +25,7 @@ class Header extends React.Component {
                         Connexion
                         </a > </li>
                         <li className="navItem">
-                            <a href="/sigup"className="link">
+                            <a href="/signup"className="link">
                             Enregistrer
                         </a> </li>
                 </ul>

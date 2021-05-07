@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../assets/login.css'
 
 class Login extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class Login extends React.Component {
         })
         .then(data => {
             console.log(data.status)
-            // this.props.history.push('/')
+     this.props.history.push('/')
         })
         .catch(error => console.log(error))
         
@@ -39,19 +40,22 @@ class Login extends React.Component {
     render() {
         return (
             <>
-               <section>
+               <section className="loginBody" >
                    <div className="container">
                         <div className="form">
-                            <p>
-                                <label htmlFor="">Email :</label>
-                                <input name="email" type="text" onChange={this.handleChange} />
+                            <h1>Connexion</h1>
+                            <p className="data">
+                                <label htmlFor="">Email </label>
+                                <input name="email" type="text" onChange={this.handleChange}  />
                             </p>
-                            <p>
-                                <label htmlFor="">Password :</label>
+                            <p className="data">
+                                <label htmlFor="">Mot de passe </label>
                                 <input name="password" type="password" onChange={this.handleChange} />
                             </p>
-                            <p>
-                                <button onClick={this.handleClick}>Connexion</button>
+                            <p className="buttonsSection">
+                          
+                                <button onClick={this.handleClick}>Connecter</button>
+                                <button className="siginUpButton">Enregistrer</button>
                             </p>
                         </div>
                    </div>
